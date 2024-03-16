@@ -1,4 +1,4 @@
-import "../styles/components/input.scss";
+import "./input.scss";
 
 interface InputProps {
   value: string;
@@ -30,11 +30,11 @@ const Input: React.FC<InputProps> = ({
   icon,
 }) => {
   return (
-    <div className="input-container">
+    <div className={`input-container  ${className}`}>
       {icon && <img src={icon} alt="icon" className="input-icon" />}
       <input
         id={id}
-        className={`input ${className}`}
+        className={`input font-Poppins-Medium-500-normal`}
         name={name}
         placeholder={placeholder}
         value={value}
@@ -48,7 +48,9 @@ const Input: React.FC<InputProps> = ({
         maxLength={length}
       />
       {errorMessage ? (
-        <p className={`input-error-message ${errorClassName}`}>
+        <p
+          className={`input-error-message flex-end font-Poppins-SemiBold-600-normal ${errorClassName}`}
+        >
           {errorMessage}
         </p>
       ) : null}

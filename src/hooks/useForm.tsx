@@ -20,7 +20,6 @@ const useForm = <T extends FormField>({
   redirectPath,
   action,
 }: UseFormProps<T>) => {
-    
   const [formData, setFormData] = useState<T>({ ...initialFormData });
   const [errors, setErrors] = useState<FormField>({});
   const [loading, setLoading] = useState<boolean>(false);
@@ -79,6 +78,9 @@ const useForm = <T extends FormField>({
     )
       validationErrors.password =
         "Password must be at least 6 characters long and include one uppercase letter, one lowercase letter, one digit, and one special character";
+
+    if (formData.confirmPassword != formData.password)
+      validationErrors.confirmPassword = "Password must be same";
 
     return validationErrors;
   };
