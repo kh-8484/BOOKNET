@@ -437,6 +437,59 @@ body {
   font-style: italic;
 }
 
+.input-container {
+  position: relative;
+}
+.input-container .input-icon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+.input-container input {
+  display: flex;
+  border: 1.6px solid #e0e2e9;
+  border-radius: 8px;
+  padding: 0 0 0 55px;
+  height: 45px;
+  outline: none;
+  max-width: 403px;
+  width: 26vw;
+}
+@media (max-width: 768px) {
+  .input-container input {
+    width: 403px;
+  }
+}
+@media (max-width: 500px) {
+  .input-container input {
+    width: 70vw;
+  }
+}
+.input-container .input-error-message {
+  color: red;
+  font-size: 11px;
+  margin: 5px 0 0 5px;
+}
+
+.button {
+  outline: none;
+  border: 0px;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+.primary {
+  background: #83c518;
+  color: #fff;
+}
+
+.secondary {
+  border: 1.6px solid #333333;
+  background: #fff;
+  color: #212121;
+  padding: 10px 24px;
+}
+
 .m-tb-1 {
   margin: 1rem 0;
 }

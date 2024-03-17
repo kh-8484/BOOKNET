@@ -16,13 +16,13 @@ const Login = () => {
     password: "",
   };
 
+  const [authType, setAuthType] = useState<string>("ADMIN");
+
   const { formData, errors, loading, handleChange, handleSubmit } = useForm({
-    initialFormData: initialData,
+    initialFormData: { ...initialData, authType },
     redirectPath: "/",
     action: login,
   });
-
-  const [authType, setAuthType] = useState<string>("ADMIN");
 
   const handleAuthType = (type: string) => {
     setAuthType(type);

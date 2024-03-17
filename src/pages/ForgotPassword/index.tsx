@@ -16,14 +16,15 @@ const ForgotPassword = () => {
     password: "",
     confirmPassword: "",
   };
+  
+  const [authType, setAuthType] = useState<string>("ADMIN");
 
   const { formData, errors, loading, handleChange, handleSubmit } = useForm({
-    initialFormData: initialData,
+    initialFormData:  { ...initialData, authType },
     redirectPath: "/login",
     action: forgotPassword,
   });
 
-  const [authType, setAuthType] = useState<string>("ADMIN");
 
   const handleAuthType = (type: string) => {
     setAuthType(type);

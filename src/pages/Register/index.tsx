@@ -17,13 +17,13 @@ const Register = () => {
     confirmPassword: "",
   };
 
+  const [authType, setAuthType] = useState<string>("ADMIN");
+  
   const { formData, errors, loading, handleChange, handleSubmit } = useForm({
-    initialFormData: initialData,
+    initialFormData: { ...initialData, authType },
     redirectPath: "/",
     action: register,
   });
-
-  const [authType, setAuthType] = useState<string>("ADMIN");
 
   const handleAuthType = (type: string) => {
     setAuthType(type);

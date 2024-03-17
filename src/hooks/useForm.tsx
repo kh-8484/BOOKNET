@@ -44,6 +44,7 @@ const useForm = <T extends FormField>({
 
     if (Object.keys(validationErrors).length) {
       setErrors(validationErrors);
+      return;
     }
 
     setLoading(true);
@@ -51,7 +52,11 @@ const useForm = <T extends FormField>({
     const { success, message } = await action(formData);
 
     if (success) navigate(redirectPath);
-    else setErrors({ message });
+    else
+      setErrors((prevData) => ({
+        ...prevData,
+        message,
+      }));
 
     setLoading(false);
   };
@@ -79,7 +84,10 @@ const useForm = <T extends FormField>({
       validationErrors.password =
         "Password must be at least 6 characters long and include one uppercase letter, one lowercase letter, one digit, and one special character";
 
-    if (formData.confirmPassword != formData.password)
+    if (
+      formData.confirmPassword &&
+      formData.confirmPassword != formData.password
+    )
       validationErrors.confirmPassword = "Password must be same";
 
     return validationErrors;
