@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 type FormField = {
@@ -24,6 +24,13 @@ const useForm = <T extends FormField>({
   const [errors, setErrors] = useState<FormField>({});
   const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setFormData((prevData) => ({
+      ...prevData,
+      authType: initialFormData.authType,
+    }));
+  }, [initialFormData.authType]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

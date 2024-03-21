@@ -12,15 +12,15 @@ const AuthType = ({
   return (
     <div className={`container ${className}`}>
       <Button
-        title="Admin"
-        btn={type == "ADMIN" ? "primary" : "secondary"}
-        onClick={() => handleAuthType("ADMIN")}
-        className="m-r-2"
-      />
-      <Button
         title="Player"
         btn={type == "PLAYER" ? "primary" : "secondary"}
         onClick={() => handleAuthType("PLAYER")}
+        className="m-r-2"
+      />
+      <Button
+        title="Admin"
+        btn={type == "ADMIN" ? "primary" : "secondary"}
+        onClick={() => handleAuthType("ADMIN")}
       />
     </div>
   );

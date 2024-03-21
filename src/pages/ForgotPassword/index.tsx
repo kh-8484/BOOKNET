@@ -16,15 +16,14 @@ const ForgotPassword = () => {
     password: "",
     confirmPassword: "",
   };
-  
-  const [authType, setAuthType] = useState<string>("ADMIN");
+
+  const [authType, setAuthType] = useState<string>("PLAYER");
 
   const { formData, errors, loading, handleChange, handleSubmit } = useForm({
-    initialFormData:  { ...initialData, authType },
+    initialFormData: { ...initialData, authType },
     redirectPath: "/login",
     action: forgotPassword,
   });
-
 
   const handleAuthType = (type: string) => {
     setAuthType(type);
@@ -33,7 +32,7 @@ const ForgotPassword = () => {
   return (
     <div className="login-container">
       <div className="bg-container flex-3">
-        <img src={bg} alt="bg" className="bg-img" />
+        <img src={bg} alt="bg" className="bg-img" loading="eager" />
       </div>
 
       <div className="form-container">
@@ -87,7 +86,7 @@ const ForgotPassword = () => {
 
             <Button
               type="submit"
-              title="Sign Up"
+              title="Forgot Password"
               btn={loading ? "loading" : "primary"}
               className="login-btn m-b-1"
             />

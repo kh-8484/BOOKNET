@@ -16,7 +16,7 @@ const Login = () => {
     password: "",
   };
 
-  const [authType, setAuthType] = useState<string>("ADMIN");
+  let [authType, setAuthType] = useState<string>("PLAYER");
 
   const { formData, errors, loading, handleChange, handleSubmit } = useForm({
     initialFormData: { ...initialData, authType },
@@ -98,7 +98,7 @@ const Login = () => {
         </form>
       </div>
       <div className="bg-container">
-        <img src={bg} alt="bg" className="bg-img" />
+        <img src={bg} alt="bg" className="bg-img" loading="eager" />
       </div>
     </div>
   );
