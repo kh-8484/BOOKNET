@@ -1,5 +1,3 @@
-import "./button.scss";
-
 interface ButtonProps {
   title: string;
   btn: "primary" | "secondary" | "loading";
@@ -19,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`button font-Poppins-SemiBold-600-normal ${className} ${btn}`}
+      className={`button font-Poppins-SemiBold-600-normal ${className} ${btn} `}
       onClick={onClick}
       type={type}
       disabled={disabled}

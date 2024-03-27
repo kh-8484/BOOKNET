@@ -1,5 +1,3 @@
-import "./input.scss";
-
 interface InputProps {
   value: string;
   name: string;

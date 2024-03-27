@@ -10,7 +10,7 @@ const AuthType = ({
   className: string;
 }) => {
   return (
-    <div className={`container ${className}`}>
+    <div className={`${className}`}>
       <Button
         title="Player"
         btn={type == "PLAYER" ? "primary" : "secondary"}

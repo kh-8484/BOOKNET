@@ -8,7 +8,6 @@ import { register } from "../../actions/login";
 import emailIcon from "./../../static/images/mail-icon.svg";
 import passwordIcon from "./../../static/images/password-icon.svg";
 import bg from "./../../static/images/sign-up-bg.png";
-import "../Login/login.scss";
 
 const Register = () => {
   const initialData = {

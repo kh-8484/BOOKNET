@@ -8,7 +8,6 @@ import emailIcon from "./../../static/images/mail-icon.svg";
 import { forgotPassword } from "../../actions/login";
 import passwordIcon from "./../../static/images/password-icon.svg";
 import bg from "./../../static/images/forgot-pass-bg.png";
-import "../Login/login.scss";
 
 const ForgotPassword = () => {
   const initialData = {

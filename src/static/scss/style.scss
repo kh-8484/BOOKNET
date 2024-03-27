@@ -1,7 +1,7 @@
-@import "base";
-@import "font";
-
-@import "components";
+@import "_base";
+@import "_font";
+@import "pages";
+@import "_components";
 @import "_mixins";
-@import "typography";
-@import "variables";
+@import "_typography";
+@import "_variables";

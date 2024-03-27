@@ -8,7 +8,7 @@ import useForm from "../../hooks/useForm";
 import emailIcon from "./../../static/images/mail-icon.svg";
 import passwordIcon from "./../../static/images/password-icon.svg";
 import bg from "./../../static/images/login-bg.png";
-import "./login.scss";
+
 
 const Login = () => {
   const initialData = {
