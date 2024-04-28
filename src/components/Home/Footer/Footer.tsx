@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="container">
         <div className="footer-container">
-          <div className="footer-social-container  p-t-5">
+          <div className="footer-social-container p-t-5">
             <img src={logo} alt="logo" className="footer-logo" />
             <div className="v-separator m-r-3"></div>
             <div className="social-icon-container">

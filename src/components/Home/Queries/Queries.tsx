@@ -5,13 +5,19 @@ import Input from "../../Input/Input";
 
 const Queries = () => {
   const [formData, setFormData] = useState({ name: "", email: "" });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleClick = () => {};
 
   return (
     <div className="query-wrapper">
       <div className="container">
         <div className="query-container">
-          <img src={cricketImg} alt="img" />
+          <img src={cricketImg} className="query-img" alt="img" />
           <div className="query-sub-container">
             <div className="query-title font-Poppins-Bold-700-normal">
               "Write to us for Queries"
@@ -39,6 +45,7 @@ const Queries = () => {
               title="Send"
               btn="primary"
               className="query-snd-btn m-t-3"
+              onClick={handleClick}
             />
           </div>
         </div>

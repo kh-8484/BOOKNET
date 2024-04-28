@@ -3,13 +3,32 @@
   background-size: cover;
   width: 100%;
 
+  @media (max-width: 1200px) {
+    background: #f4f4f4;
+  }
+
+  .container {
+    @media (max-width: 1200px) {
+      justify-content: center;
+    }
+  }
+
   .query-container {
     width: 80%;
     background: #fff;
     border-radius: 20px;
     display: flex;
     margin: 60px auto;
+    @media (max-width: 1200px) {
+      background: none;
+      margin: 0;
+    }
 
+    .query-img {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
     .query-sub-container {
       display: flex;
       flex-direction: column;
@@ -18,10 +37,18 @@
       padding: 30px;
       width: 100%;
 
+      @media (max-width: 1200px) {
+        padding: 0;
+      }
+
       .query-search-input {
         .input {
           padding-left: 20px;
           border: 1px solid #333333;
+
+          @media (max-width: 1200px) {
+            height: 40px;
+          }
         }
       }
 
@@ -29,18 +56,34 @@
         border-radius: 12px;
         font-size: 16px;
         width: 130px;
+
+        @media (max-width: 1200px) {
+          font-size: 12px;
+          height: 35px;
+          padding: 4px;
+          margin-bottom: 2rem;
+        }
       }
 
       .query-title {
         color: #83c518;
         font-size: 24px;
         line-height: 60px;
+
+        @media (max-width: 1200px) {
+          font-size: 14px;
+        }
       }
 
       .query-sub-title {
         font-size: 16px;
         line-height: 25px;
         color: #000;
+
+        @media (max-width: 1200px) {
+          font-size: 12px;
+          text-align: center;
+        }
       }
     }
   }

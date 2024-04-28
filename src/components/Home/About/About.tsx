@@ -24,7 +24,7 @@ const About = () => {
                 boosts your savings. Join us and experience the thrill of
                 booking your perfect sports venue with rewarding benefits.
               </div>
-              <img src={aboutImg} alt="img" />
+              <img src={aboutImg} className="about-img" alt="img" />
             </div>
           </div>
 
@@ -37,7 +37,7 @@ const About = () => {
                 <div className="provide-img-wrapper">
                   <img src={bookingImg} alt="icon" className="provide-img" />
                 </div>
-                <div className="font-Poppins-Bold-700-normal">
+                <div className="provide-img-title font-Poppins-Bold-700-normal">
                   Seamless Booking Experience
                 </div>
               </div>
@@ -45,7 +45,7 @@ const About = () => {
                 <div className="provide-img-wrapper">
                   <img src={rewardsImg} alt="icon" className="provide-img" />
                 </div>
-                <div className="font-Poppins-Bold-700-normal">
+                <div className="provide-img-title font-Poppins-Bold-700-normal">
                   Rewards Program
                 </div>
               </div>
@@ -53,7 +53,7 @@ const About = () => {
                 <div className="provide-img-wrapper">
                   <img src={realTimeImg} alt="icon" className="provide-img" />
                 </div>
-                <div className="font-Poppins-Bold-700-normal">
+                <div className="provide-img-title font-Poppins-Bold-700-normal">
                   Realtime Availability
                 </div>
               </div>
@@ -61,7 +61,7 @@ const About = () => {
                 <div className="provide-img-wrapper">
                   <img src={communityImg} alt="icon" className="provide-img" />
                 </div>
-                <div className="font-Poppins-Bold-700-normal">
+                <div className="provide-img-title font-Poppins-Bold-700-normal">
                   Community Engagement
                 </div>
               </div>
